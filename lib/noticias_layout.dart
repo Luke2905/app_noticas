@@ -7,6 +7,8 @@ import 'package:news_page/main.dart';
 import 'package:news_page/noticias/noticia_1.dart';
 import 'package:news_page/noticias/noticia_2.dart';
 import 'package:news_page/noticias/noticia_3.dart';
+import 'package:news_page/noticias/noticia_4.dart';
+import 'package:news_page/noticias/noticia_5.dart';
 
 //-------Tela de Noticias----------------
 class Noticias extends StatelessWidget {
@@ -32,6 +34,7 @@ class Noticias extends StatelessWidget {
             data: "26/02/22",
             descricao:
                 "O que era pra ser um dia recheado de informações sobre o clássico diante \n do Internacional, foi um dia de notícias extra-campo para o Grêmio",
+            tocar: () => selecaoItem(context, 1),
           ),
           noticiaItem(
             imagem:
@@ -41,12 +44,33 @@ class Noticias extends StatelessWidget {
             data: "25/02/2022",
             descricao:
                 "As pesquisas de intenção de voto serão, com sempre, o grande termômetro \n das eleições em 2022. Até aí, nenhuma grande novidade.",
+            tocar: () => selecaoItem(context, 2),
+          ),
+          noticiaItem(
+            imagem:
+                "data:image/jpeg;base64,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",
+            titulo:
+                "Bicho-preguiça resgatado em Diadema é devolvido à natureza",
+            data: "23/02/2022 ",
+            descricao:
+                "Mamífero é reintroduzido na natureza no parque Oriental, em Ribeirão Pires,\n onde já vivem outras três preguiças",
+            tocar: () => selecaoItem(context, 3),
+          ),
+          noticiaItem(
+            imagem:
+                "data:image/jpeg;base64,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",
+            titulo:
+                "Cozinheira é morta enquanto trabalhava em bar em Diadema, em São Paulo",
+            data: "09/02/2022",
+            descricao:
+                "Selma Nogueira, de 50 anos, foi baleada nas costas por um homem, \n que entrou no estabelecimento, efetuou quatro disparos e saiu",
+            tocar: () => selecaoItem(context, 4),
           ),
         ],
       ),
     );
   }
-//--------Fim telaa Noticias---------------
+//--------Fim tela Noticias---------------
 
 //--------Metodo para Exibir Noticias-------
   noticiaItem(
@@ -109,7 +133,11 @@ class Noticias extends StatelessWidget {
         break;
       case 3:
         Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => SegundaClasse()));
+            .push(MaterialPageRoute(builder: (context) => Noticia4()));
+        break;
+      case 4:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => Noticia5()));
         break;
     }
   }

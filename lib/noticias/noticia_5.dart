@@ -2,13 +2,13 @@ import 'package:news_page/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Noticia3 extends StatelessWidget {
+class Noticia5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-          child: Text("POLITICA"),
+          child: Text("DIADEMA"),
         ),
       ),
       body: Container(
@@ -17,12 +17,8 @@ class Noticia3 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Container(
-              height: 250,
-              width: 400,
-              child: Image.network(
-                  "https://media.gazetadopovo.com.br/2021/09/17092520/Untitled-design-3-960x540.png"),
-            ),
+            Image.network(
+                "https://pubimg.band.uol.com.br/files/063008d272e9b42a7adc.webp"),
             Divider(color: Colors.white24),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -31,7 +27,7 @@ class Noticia3 extends StatelessWidget {
                   margin: new EdgeInsets.all(4),
                   child: Center(
                     child: Text(
-                        "Nova pesquisa traz má notícia para Bolsonaro e alerta para Lula",
+                        "Cozinheira é morta enquanto trabalhava em bar em Diadema, em São Paulo",
                         style: TextStyle(
                             fontSize: 14, fontWeight: FontWeight.bold)),
                   ),
@@ -39,7 +35,7 @@ class Noticia3 extends StatelessWidget {
                 Container(
                   margin: new EdgeInsets.all(4),
                   child: Text(
-                      "As pesquisas de intenção de voto serão, com sempre, o grande termômetro das eleições em 2022. Até aí, nenhuma grande novidade. \n\n A nova pesquisa Ipespe, divulgada nesta sexta-feira, 25, revela, por exemplo, que o eleitor brasileiro é conservador, em sua maioria, mas continua preferindo Lula a Jair Bolsonaro. \n\n Esses dados são no mínimo curiosos. Vejam o que diz o cientista político Antonio Lavareda, responsável pela pesquisa Ipespe, sobre isto: \n\n Se a maioria dos eleitores é conservadora e vota no Lula (com potencial de voto próximo a 60% )."),
+                      "Uma cozinheira foi morta enquanto trabalhava em um bar em Diadema, na região metropolitana de São Paulo. \n\n Selma Nogueira, de 50 anos, foi baleada nas costas por um homem, que entrou no estabelecimento, efetuou quatro disparos e saiu.\n\n A mulher foi socorrida pelo Samu e levada ao Hospital Estadual de Diadema, mas não resistiu aos ferimentos. \n\n A polícia vai ouvir testemunhas e procura por câmeras de segurança da região para identificar o atirador. A hipótese de execução não está descartada, já que nada foi levado da vítima."),
                 ),
                 Center(
                   child: RaisedButton(
