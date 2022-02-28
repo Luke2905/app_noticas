@@ -1,8 +1,12 @@
-// ignore_for_file: dead_code
+// ignore: file_names
+// ignore_for_file: dead_code, use_key_in_widget_constructors
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_page/main.dart';
+import 'package:news_page/noticias/noticia_1.dart';
+import 'package:news_page/noticias/noticia_2.dart';
+import 'package:news_page/noticias/noticia_3.dart';
 
 //-------Tela de Noticias----------------
 class Noticias extends StatelessWidget {
@@ -19,6 +23,7 @@ class Noticias extends StatelessWidget {
             data: "2022/02/27",
             descricao:
                 "O presidente da Rússia, Vladimir Putin, fez um breve pronunciamento em rede \n nacional de televisão na manhã de hoje...",
+            tocar: () => selecaoItem(context, 0),
           ),
           noticiaItem(
             imagem:
@@ -48,7 +53,8 @@ class Noticias extends StatelessWidget {
           {required String imagem,
           required String titulo,
           required String data,
-          required String descricao}) =>
+          required String descricao,
+          VoidCallback? tocar}) =>
       Container(
         margin: new EdgeInsets.all(3),
         decoration: BoxDecoration(
@@ -56,7 +62,7 @@ class Noticias extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: InkWell(
-            onTap: () => "",
+            onTap: tocar,
             child: Row(
               // ignore: duplicate_ignore
               children: [
@@ -84,4 +90,27 @@ class Noticias extends StatelessWidget {
             )),
       );
 //-----Fim metodo---------
+
+//-------Selecionar Noticia-------------
+  selecaoItem(BuildContext context, int i) {
+    Navigator.of(context).pop();
+    switch (i) {
+      case 0:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => Noticia1()));
+        break;
+      case 1:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => Noticia2()));
+        break;
+      case 2:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => Noticia3()));
+        break;
+      case 3:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => SegundaClasse()));
+        break;
+    }
+  }
 }
