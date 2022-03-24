@@ -15,8 +15,17 @@ class Noticias extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+     color: Colors.indigo.shade400,
       child: ListView(
         children: <Widget>[
+          Container(
+            width: double.infinity,
+            height: 200,
+            color: Colors.indigo.shade300,
+            child: Center(
+              child: Text("Noticias", style: TextStyle(fontSize: 40),),
+            ),
+          ),
           noticiaItem(
             imagem:
                 "data:image/jpeg;base64,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",
@@ -82,6 +91,7 @@ class Noticias extends StatelessWidget {
       Container(
         margin: new EdgeInsets.all(3),
         decoration: BoxDecoration(
+          color: Colors.white,
           border: Border.all(width: 2.0),
           borderRadius: BorderRadius.circular(10),
         ),

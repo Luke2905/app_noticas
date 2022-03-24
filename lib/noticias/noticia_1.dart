@@ -1,4 +1,4 @@
-import 'package:news_page/main.dart';
+import 'package:news_page/news_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class Noticia1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Image.network(
-                "https://conteudo.imguol.com.br/c/noticias/b6/2022/02/27/soldado-ucraniano-observa-de-longe-o-clarao-formado-pelo-incendio-em-um-deposito-de-petroleo-no-domingo-27-1645947925043_v2_150x150.jpg.webp"),
+                "https://img.olhardigital.com.br/wp-content/uploads/2022/03/guerra-russia-e-ucrania-1000x450.jpg"),
             Divider(color: Colors.white24),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
